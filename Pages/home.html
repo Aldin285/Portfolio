@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link  href="style.css" media="all" rel="stylesheet" type="text/css" >
+    <title>Home</title>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    
+    <br/>
+    <br/>
+    <div class="introduction">
+
+        <ul>
+            <li>Boukabou Alla-Eddine</li>
+            <li>Etudiant en B3 chez Sup De Vinci</li>
+            <li>En recherche d'alternance</li>
+        </ul>
+
+        <img src="../Imports/pics/SDV.png">
+    </div>
+    
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+</script>
+
+</body>
+</html>
