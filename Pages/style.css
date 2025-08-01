@@ -13,6 +13,9 @@ html{
   font-optical-sizing: auto;
   font-weight:normal;
   font-style: normal;
+  color: whitesmoke;
+
+  overflow-wrap: break-word;
 }
 
 header{
@@ -55,10 +58,6 @@ li, a{
     text-decoration: none;
 }
 
-button{
-    background-color: aqua;
-}
-
 
 /* ------------------------------- */
 .introduction{
@@ -85,3 +84,56 @@ button{
     height: 150px;
     
 }
+
+/* ------------------------------- */
+.aboutMe{
+    padding: 20px 50px;
+    border-radius: 20px;
+    background-color: rgb(24, 93, 122,0.50);
+
+}
+
+input[type="radio"] {
+      display: none;
+}
+
+.skill {
+    display: flex;
+    gap: 20px;
+   
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.skill label {
+    cursor: pointer;
+    padding-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.skill label:hover{
+    color: aquamarine;
+}
+
+#frontEnd:checked ~ .skill label[for="frontEnd"],
+#backEnd:checked ~ .skill label[for="backEnd"],
+#DB:checked ~ .skill label[for="DB"],
+#software:checked ~ .skill label[for="software"] {
+    color: aquamarine;
+    border-bottom: 2px solid aquamarine;
+}
+
+.info > div {
+    display: none;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+#frontEnd:checked ~ .info #frontEnd-info,
+#backEnd:checked ~ .info #backEnd-info,
+#DB:checked ~ .info #DB-info,
+#software:checked ~ .info #software-info {
+    display: block;
+}
+
+
