@@ -10,9 +10,7 @@
 
 <body>
     <div id="header-placeholder"></div>
-    
-    <br/>
-    <br/>
+
     <div class="introduction">
 
         <ul>
@@ -49,13 +47,31 @@
         </div>
 
     </div>
-    
+
 <script>
     fetch('header.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('header-placeholder').innerHTML = data;
         });
+
+    function Open() {
+        document.getElementById("menuContent").classList.remove("hide");
+        document.getElementById("menuContent").classList.add("show");
+    }
+
+    function Close() {
+            document.getElementById("menuContent").classList.remove("show");
+       
+        
+            document.getElementById("menuContent").classList.add("hide");
+
+            setTimeout(()=>{
+                document.getElementById("menuContent").classList.remove("hide");
+            },300)
+    
+    }
+
 </script>
 
 </body>

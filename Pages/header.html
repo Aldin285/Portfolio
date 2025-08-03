@@ -1,12 +1,31 @@
-<header>
-        <!-- <img class="logo" src="neco arc.gif" alt="logo"> -->
-        <a href="home.html"><img src="../Imports/pics/dog.gif" class="dog" ></a>
-        <nav>
-            <ul class="nav_links">
-                <li><a href="#">Page 1</a></li>
-                <li><a href="#">Page 2</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+<header id="navBar">
+
+        <div class="openMenu">
+            <button  id="openButton" onclick="Open()"><img src="../Imports/pics/menu.png"></button>
+        </div>
+       
+
+        <div class="menuContent" id="menuContent">
+
+            <div class="closeMenu">
+                <button type="button"  onclick="Close()">
+                    <img src="../Imports/pics/arrowLeft.png" >
+                </button>
+            </div>
+
+            <div class="dog">
+                <a href="home.html"><img src="../Imports/pics/dog.gif" id="activeDog"  ></a>
+                <a href="home.html"><img src="../Imports/pics/sleepingDog3.gif" id="sleepingDog"  ></a>
+            </div>
+
+            <nav class="nav_links">
+                <ul >
+                    <li><a href="#">Page 1</a></li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         
+        </div>
 </header>
+
