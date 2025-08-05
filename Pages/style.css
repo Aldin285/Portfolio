@@ -332,4 +332,127 @@ input[type="radio"] {
     display: block;
 }
 
+/* ---------------Mes Realisations--------------- */
 
+.realisation {
+    background-color: rgba(0, 0, 0, 0.56);
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.realisation h1{
+    text-align: center;
+}
+
+.projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px 0;
+}
+
+.projectElem{
+    position: relative;
+    width: 40%;
+    height: auto;
+    padding: 10px 10px;
+    text-align: center;
+    
+}
+
+.projectElem img{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+    border-radius: 20px;
+}
+
+.projectElem:hover img{
+    opacity: 0.3;
+}
+
+.projectText{
+
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+
+    transition: .5s ease;
+
+    font-size: 2vw;
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+
+.projectTitle{
+
+    transition: .3s ease;
+    font-size: 2vw;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+/* Ajustement de la position du texte de Loc'Auto */
+.projectTitle.car{
+    top: 37%;
+}
+
+.projectText.car{
+    top: 30%;
+}
+
+/* Ajustement de la position du texte de Valorent */
+.projectTitle.valorant{
+    top: 44%;
+}
+
+.projectText.valorant{
+    top: 40%;
+}
+
+.projectText a{
+    font-size: 2vw;
+}
+
+.projectElem:hover .projectText{
+    opacity: 1;
+}
+
+.projectElem:hover .projectTitle{
+    opacity: 0;
+}
+
+@media (max-width: 1300px){
+
+    .projectElem{
+    width: 50%;
+    }
+
+    .projectTitle.car{
+    top: 45%;
+    }
+
+    .projectText.car{
+        top: 45%;
+    }
+
+}
